@@ -1,10 +1,10 @@
 import React from 'react'
 
-function publicLayout(WrappedComponent) {
+function PublicLayout(WrappedComponent) {
     return (props) => {
         console.log("Public Props:", props);
         return <WrappedComponent {...props} />;
     };
 }
 
-export default publicLayout
+export default PublicLayout
