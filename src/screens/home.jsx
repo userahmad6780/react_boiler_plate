@@ -1,9 +1,17 @@
 import React from 'react'
+import { useNavigate } from "react-router"; 
 
-function home(props) {
+function Home(props) {
+  let navigate = useNavigate();
   return (
-    <div> <h1>Hello, {props.name}!</h1> home </div>
+    <div class="mt-5"> 
+      <h1>Hello, {props.name}!</h1> 
+      home
+      <div>
+        <button type="button" onClick={()=>navigate("/login")} class="btn btn-primary btn-sm mt-3">Logout</button>
+      </div>
+    </div>
   )
 }
 
-export default home
+export default Home
