@@ -1,8 +1,9 @@
 import PrivateLayout from "../layouts/PrivateLayout";
 import PublicLayout from "../layouts/PublicLayout";
-import Home from "../screens/home";
-import Login from "../screens/login";
+import Home from "../screens/Home";
+import Login from "../screens/Login";
 import PageNotFound from "../screens/PageNotFound";
+import Signup from "../screens/Signup";
 
 
 export const routes = [
@@ -18,6 +19,13 @@ export const routes = [
         'name': 'Login',
         'isPublic': true,
         'component': Login,
+        'layout': PublicLayout,
+    },
+    {
+        'path': '/signup',
+        'name': 'Signup',
+        'isPublic': true,
+        'component': Signup,
         'layout': PublicLayout,
     },
     {

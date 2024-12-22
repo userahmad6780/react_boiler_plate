@@ -1,8 +1,8 @@
 import './App.css';
 import { Routes, Route } from "react-router";
 import { routes } from './routes';
-import PublicRoute from './routes/publicRoutes';
-import PrivateRoute from './routes/privateRoute';
+import PublicRoute from './routes/PublicRoutes';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 function App() {
