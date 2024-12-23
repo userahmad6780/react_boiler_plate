@@ -3,10 +3,13 @@ import { Routes, Route } from "react-router";
 import { routes } from './routes';
 import PublicRoute from './routes/PublicRoutes';
 import PrivateRoute from './routes/PrivateRoute';
+import { useAuth } from './context/AuthContext';
 
 
 function App() {
-  const isAuthenticated = true
+  console.log(useAuth());
+  const { user } = useAuth();
+  const isAuthenticated = user
 
   return (
     <div className="App">
@@ -23,6 +26,7 @@ function App() {
                   component={component}
                   layout={layout}
                   isAuthenticated={isAuthenticated}
+                  name={user?.name}
                 />
               }
             />
