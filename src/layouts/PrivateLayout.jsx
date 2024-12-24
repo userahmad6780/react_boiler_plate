@@ -2,7 +2,6 @@ import React from 'react'
 
 function PrivateLayout(WrappedComponent) {
   return (props) => {
-    console.log("Private Props:", props);
     return (
       <>
         <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">

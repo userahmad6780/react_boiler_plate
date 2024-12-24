@@ -12,7 +12,6 @@ function Login() {
       <div>
         <button type="button" onClick={()=>{
           login({ name: 'test' }); 
-          console.log('here ------------------------')
           navigate("/")
         }} className="btn btn-primary btn-sm mt-3">Login</button>
       </div>
