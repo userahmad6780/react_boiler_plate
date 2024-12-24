@@ -6,9 +6,10 @@ const PrivateRoute = ({ component: Component, layout: Layout, isAuthenticated, .
     return <Navigate to="/login" />;
   }
 
-  const WrappedComponent = Layout ? Layout(Component) : Component;
+  // here giving component as a prop to layout coponent
+  const ComponentWithLayout = Layout ? Layout(Component) : Component;
 
-  return <WrappedComponent {...rest} />;
+  return <ComponentWithLayout {...rest}  />;
 };
 
 export default PrivateRoute;
