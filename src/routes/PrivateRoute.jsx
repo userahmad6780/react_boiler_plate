@@ -1,7 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router";
 
-const PrivateRoute = ({ component: Component, layout: Layout, isAuthenticated, ...rest }) => {
+const PrivateRoute = ({ component: Component, layout: Layout, ...rest }) => {
+  let isAuthenticated = JSON.parse(localStorage.getItem('user'));
   if (!isAuthenticated) {
     return <Navigate to="/login" />;
   }

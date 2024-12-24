@@ -1,9 +1,9 @@
 import React from "react";
 import { Navigate } from "react-router";
 
-const PublicRoute = ({ component: Component, layout: Layout, isAuthenticated, path, ...rest }) => {
+const PublicRoute = ({ component: Component, layout: Layout, path, ...rest }) => {
+  let isAuthenticated = JSON.parse(localStorage.getItem('user'));
   if (isAuthenticated && path != '*') {
-    console.log('home---------------------------------')
     return <Navigate to="/" />;
   }
   

@@ -10,7 +10,11 @@ function Login() {
     <div className="mt-5">
       login page
       <div>
-        <button type="button" onClick={()=>{login({ name: 'test' }); navigate("/")}} className="btn btn-primary btn-sm mt-3">Login</button>
+        <button type="button" onClick={()=>{
+          login({ name: 'test' }); 
+          console.log('here ------------------------')
+          navigate("/")
+        }} className="btn btn-primary btn-sm mt-3">Login</button>
       </div>
     </div>
   )
